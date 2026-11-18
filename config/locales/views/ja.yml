@@ -1,0 +1,9 @@
+ja:
+  common:
+    login: "ログイン"
+    logout: "ログアウト"
+    email: "メールアドレス"
+    password: "パスワード"
+    sign_up: "新規会員登録"
+    save: "保存"
+    cancel: "キャンセル"
