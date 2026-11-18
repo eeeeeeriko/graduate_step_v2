@@ -8,8 +8,12 @@ Bundler.require(*Rails.groups)
 
 module Myapp
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
+    
+    config.i18n.default_locale = :ja # Railsの標準言語を日本語に設定
+    config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.{rb,yml}")] # サブフォルダ内の翻訳ファイルも読み込む
+    # Initialize configuration defaults for originally generated Rails version.
+
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
