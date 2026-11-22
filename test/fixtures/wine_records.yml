@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  acidity: 1
+  tannin: 1
+  sweetness: 1
+  satisfaction: 1
+
+two:
+  user: two
+  name: MyString
+  acidity: 1
+  tannin: 1
+  sweetness: 1
+  satisfaction: 1
