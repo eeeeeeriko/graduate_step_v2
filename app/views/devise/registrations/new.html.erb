@@ -1,0 +1,35 @@
+<h2><%= t("common.sign_up") %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <% if resource.errors.any? %>
+    <ul>
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :name, t("common.name") %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :email, t("common.email") %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password, t("common.password") %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, t("common.password_confirmation") %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.submit t("common.sign_up") %>
+  </div>
+<% end %>

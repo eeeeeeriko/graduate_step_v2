@@ -2,8 +2,34 @@ ja:
   common:
     login: "ログイン"
     logout: "ログアウト"
+    name: "名前"
     email: "メールアドレス"
     password: "パスワード"
     sign_up: "新規会員登録"
+    password_confirmation: "パスワード（確認用）"
     save: "保存"
     cancel: "キャンセル"
+
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認用）"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "はすでに登録されています"
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "を入力してください"
+      taken: "はすでに登録されています"
+      confirmation: "と確認用の入力が一致しません"
+      too_short: "は%{count}文字以上で入力してください"
+      too_long: "は%{count}文字以下で入力してください"
+      invalid: "は正しい形式で入力してください"
