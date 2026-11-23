@@ -1,4 +1,7 @@
 ja:
+  time:
+    formats:
+      short: "%Y/%m/%d"
   common:
     login: "ログイン"
     logout: "ログアウト"
@@ -61,6 +64,7 @@ ja:
       success: "ワインを登録しました"
     index:
       title: "ワイン記録一覧"
+      empty: "ワイン記録がまだありません"
 
     form:
       name: "ワイン名"
