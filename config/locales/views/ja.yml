@@ -9,6 +9,8 @@ ja:
     password_confirmation: "パスワード（確認用）"
     save: "登録"
     cancel: "取り消し"
+    edit: "編集"
+    delete: "削除"
 
   devise:
     failure:
@@ -57,6 +59,8 @@ ja:
       title: "ワイン新規登録"
     create:
       success: "ワインを登録しました"
+    index:
+      title: "ワイン記録一覧"
 
     form:
       name: "ワイン名"

@@ -2,6 +2,9 @@
 class WineRecordsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+  end
+
   def new
     @wine_record = WineRecord.new
   end
