@@ -1,35 +1,41 @@
+
 <main class="container py-5">
   <h1 class="text-center mb-4"><%= t("wine_records.index.title") %></h1>
 
-  <%# Issue #33でDBから取得したデータに置き換える %>
-  <div class="p-3 mb-3" style="background-color: #ffe5e5;">
-    <div class="d-flex justify-content-between align-items-center mb-2">
-      <h2 class="fs-5 fw-bold mb-0">カベルネ・フラン</h2>
-      <span class="small">2026/11/13</span>
-    </div>
+  <% if @wine_records.any? %>
+    <% @wine_records.each do |wine_record| %>
+      <div class="p-3 mb-3" style="background-color: #ffe5e5;">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h2 class="fs-5 fw-bold mb-0"><%= wine_record.name %></h2>
+          <span class="small"><%= l(wine_record.created_at, format: :short) %></span>
+        </div>
 
-  <div class="d-flex flex-wrap align-items-center gap-2">
-    <span class="badge border text-dark bg-white">
-    <%= t("wine_records.form.acidity") %>：<%= t("wine_records.options.acidity.high") %>
-    </span>
-    <span class="badge border text-dark bg-white">
-    <%= t("wine_records.form.tannin") %>：<%= t("wine_records.options.tannin.high") %>
-    </span>
-    <span class="badge border text-dark bg-white">
-    <%= t("wine_records.form.sweetness") %>：<%= t("wine_records.options.sweetness.dry") %>
-    </span>
-    <span class="badge border text-dark bg-white">
-    <%= t("wine_records.form.satisfaction") %>：<%= t("wine_records.options.satisfaction.high") %>
-    </span>
+        <div class="d-flex flex-wrap align-items-center gap-2"> 
+          <span class="badge border text-dark bg-white">
+            <%= t("wine_records.form.acidity") %>：<%= t("wine_records.options.acidity.#{ { 1 => 'low', 2 => 'medium', 3 => 'high' }[wine_record.acidity] }") %>
+          </span>
+          <span class="badge border text-dark bg-white">
+            <%= t("wine_records.form.tannin") %>：<%= t("wine_records.options.tannin.#{ { 1 => 'low', 2 => 'medium', 3 => 'high' }[wine_record.tannin] }") %>
+          </span>
+          <span class="badge border text-dark bg-white">
+            <%= t("wine_records.form.sweetness") %>：<%= t("wine_records.options.sweetness.#{ { 1 => 'dry', 2 => 'sweet' }[wine_record.sweetness] }") %>
+          </span>
+          <span class="badge border text-dark bg-white">
+            <%= t("wine_records.form.satisfaction") %>：<%= t("wine_records.options.satisfaction.#{ { 1 => 'low', 2 => 'medium', 3 => 'high' }[wine_record.satisfaction] }") %>
+          </span>
 
-      <div class="ms-auto d-flex gap-2">
-        <button type="button" class="btn btn-danger btn-sm" disabled>
-          <i class="bi bi-pencil"></i> <%= t("common.edit") %>
-        </button>
-        <button type="button" class="btn btn-danger btn-sm" disabled>
-          <i class="bi bi-trash"></i> <%= t("common.delete") %>
-        </button>
+          <div class="ms-auto d-flex gap-2">
+            <button type="button" class="btn btn-danger btn-sm" disabled>
+              <i class="bi bi-pencil"></i> <%= t("common.edit") %>
+            </button>
+            <button type="button" class="btn btn-danger btn-sm" disabled>
+              <i class="bi bi-trash"></i> <%= t("common.delete") %>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    <% end %>
+  <% else %>
+    <p class="text-center"><%= t("wine_records.index.empty") %></p>
+  <% end %>
 </main>
