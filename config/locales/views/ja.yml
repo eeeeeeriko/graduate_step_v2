@@ -3,6 +3,8 @@ ja:
     formats:
       short: "%Y/%m/%d"
   common:
+    app_name: "ワインアプリ〜自分の好きを知ろう〜"
+    account_edit: "会員情報変更"
     login: "ログイン"
     logout: "ログアウト"
     name: "名前"
