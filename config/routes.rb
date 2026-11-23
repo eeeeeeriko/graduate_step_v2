@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
     root "home#index"
 
-    resources :wine_records, only: [:index, :new, :create]
+    resources :wine_records, only: [:index, :new, :create, :edit, :update]
 end

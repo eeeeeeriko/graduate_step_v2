@@ -13,6 +13,7 @@ ja:
     save: "登録"
     cancel: "取り消し"
     edit: "編集"
+    update: "更新"
     delete: "削除"
 
   devise:
@@ -65,14 +66,16 @@ ja:
     index:
       title: "ワイン記録一覧"
       empty: "ワイン記録がまだありません"
-
+    edit:
+      title: "ワイン編集"
+    update:
+      success: "ワインを更新しました"
     form:
       name: "ワイン名"
       acidity: "酸味"
       tannin: "タンニン"
       sweetness: "甘口/辛口"
       satisfaction: "満足度"
-
     options:
       acidity:
         low: "弱"
