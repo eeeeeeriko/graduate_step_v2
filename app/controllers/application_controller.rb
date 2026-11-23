@@ -16,4 +16,13 @@ class ApplicationController < ActionController::Base
       root_path
     end
   end
+
+  # ログイン成功後の遷移先を設定する
+  def after_sign_in_path_for(resource)
+    if respond_to?(:wine_records_path)
+      wine_records_path
+    else
+      root_path
+    end
+  end
 end
