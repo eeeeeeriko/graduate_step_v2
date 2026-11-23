@@ -17,6 +17,8 @@ ja:
     edit: "編集"
     update: "更新"
     delete: "削除"
+    terms: "利用規約"
+    privacy_policy: "プライバシーポリシー"
 
   devise:
     failure:
