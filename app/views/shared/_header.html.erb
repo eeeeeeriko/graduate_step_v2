@@ -1,0 +1,15 @@
+<header>
+  <nav class="navbar navbar-expand-lg" style="background-color: #842323;">
+    <div class="container">
+      <%= link_to t("common.app_name"), root_path, class: "navbar-brand fw-bold text-white" %>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <% if user_signed_in? %>
+          <%= link_to t("wine_records.new.title"), new_wine_record_path, class: "btn btn-danger btn-sm" %>
+          <%= link_to t("common.account_edit"), edit_user_registration_path, class: "btn btn-light btn-sm" %>
+          <%= button_to t("common.logout"), destroy_user_session_path, method: :delete, class: "btn btn-light btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>

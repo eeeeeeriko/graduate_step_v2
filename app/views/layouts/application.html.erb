@@ -18,9 +18,7 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%= button_to t("common.logout"), destroy_user_session_path, method: :delete %>
-    <% end %>
+    <%= render "shared/header" %>
 
     <% flash.each do |type, message| %>
       <p><%= message %></p>
