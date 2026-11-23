@@ -92,3 +92,6 @@ ja:
         low: "★"
         medium: "★★"
         high: "★★★"
+    destroy:
+      confirm: "このワイン記録を削除しますか？"
+      success: "ワインを削除しました"

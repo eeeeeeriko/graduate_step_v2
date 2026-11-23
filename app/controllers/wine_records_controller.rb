@@ -34,6 +34,12 @@ class WineRecordsController < ApplicationController
     end
   end
 
+  def destroy
+    @wine_record = current_user.wine_records.find(params[:id])
+    @wine_record.destroy!
+    redirect_to wine_records_path, notice: t("wine_records.destroy.success"), status: :see_other
+  end
+
   private
 
   def wine_record_params

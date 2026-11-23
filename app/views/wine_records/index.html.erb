@@ -27,9 +27,12 @@
             <%= link_to edit_wine_record_path(wine_record), class: "btn btn-danger btn-sm" do %>
               <i class="bi bi-pencil"></i> <%= t("common.edit") %>
             <% end %>
-            <button type="button" class="btn btn-danger btn-sm" disabled>
+            <%= button_to wine_record_path(wine_record),
+                method: :delete,
+                form: {onsubmit: "return confirm(#{t('wine_records.destroy.confirm').to_json})"},
+                class: "btn btn-danger btn-sm" do %>
               <i class="bi bi-trash"></i> <%= t("common.delete") %>
-            </button>
+            <% end %>
           </div>
         </div>
       </div>
