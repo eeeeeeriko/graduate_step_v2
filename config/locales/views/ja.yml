@@ -31,6 +31,9 @@ ja:
       signed_out: "ログアウトしました"
     registrations:
       updated: "会員情報を更新しました"
+      password_optional: "変更しない場合は空欄にしてください"
+      current_password_required: "変更内容を確認するため、現在のパスワードを入力してください"
+      pending_reconfirmation: "メールアドレスの確認待ち: %{email}"
   activerecord:
     attributes:
       user:
