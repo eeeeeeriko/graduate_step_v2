@@ -21,10 +21,10 @@ ja:
       invalid: "メールアドレスまたはパスワードが正しくありません"
       not_found_in_database: "メールアドレスまたはパスワードが正しくありません"
       already_authenticated: "すでにログインしています"
+      unauthenticated: "ログインしてください"
     sessions:
       signed_in: "ログインしました"
       signed_out: "ログアウトしました"
-
   activerecord:
     attributes:
       user:
@@ -47,7 +47,6 @@ ja:
       messages:
         inclusion: "を選択してください"
         blank: "を入力してください"
-
   errors:
     format: "%{attribute} %{message}"
     messages:
