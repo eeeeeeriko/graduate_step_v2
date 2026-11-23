@@ -10,6 +10,13 @@ ja:
     save: "保存"
     cancel: "キャンセル"
 
+  devise:
+    failure:
+      invalid: "メールアドレスまたはパスワードが正しくありません"
+      not_found_in_database: "メールアドレスまたはパスワードが正しくありません"
+    sessions:
+      signed_in: "ログインしました"
+
   activerecord:
     attributes:
       user:
