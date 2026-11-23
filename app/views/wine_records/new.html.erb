@@ -3,6 +3,15 @@
   <h1 class="text-center mb-4"><%= t("wine_records.new.title") %></h1>
 
   <%= form_with model: @wine_record do |f| %>
+    <% if @wine_record.errors.any? %>
+      <div class="alert alert-danger">
+        <ul class="mb-0">
+          <% @wine_record.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="mb-3">
       <%= f.label :name do %>
         <%= t("wine_records.form.name") %><span class="text-danger">*</span>

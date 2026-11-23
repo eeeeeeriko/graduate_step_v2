@@ -26,12 +26,21 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード（確認用）"
+      wine_record:
+        name: "ワイン名"
+        acidity: "酸味"
+        tannin: "タンニン"
+        sweetness: "甘辛度"
+        satisfaction: "満足度"
     errors:
       models:
         user:
           attributes:
             email:
               taken: "はすでに登録されています"
+      messages:
+        inclusion: "を選択してください"
+        blank: "を入力してください"
 
   errors:
     format: "%{attribute} %{message}"
@@ -46,6 +55,8 @@ ja:
   wine_records:
     new:
       title: "ワイン新規登録"
+    create:
+      success: "ワインを登録しました"
 
     form:
       name: "ワイン名"
