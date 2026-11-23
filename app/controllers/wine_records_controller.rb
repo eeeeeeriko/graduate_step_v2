@@ -20,6 +20,20 @@ class WineRecordsController < ApplicationController
     end
   end
 
+  def edit
+    @wine_record = current_user.wine_records.find(params[:id])
+  end
+
+  def update
+    @wine_record = current_user.wine_records.find(params[:id])
+
+    if @wine_record.update(wine_record_params)
+      redirect_to wine_records_path, notice: t("wine_records.update.success")
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def wine_record_params
