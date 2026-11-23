@@ -7,8 +7,8 @@ ja:
     password: "パスワード"
     sign_up: "新規会員登録"
     password_confirmation: "パスワード（確認用）"
-    save: "保存"
-    cancel: "キャンセル"
+    save: "登録"
+    cancel: "取り消し"
 
   devise:
     failure:
@@ -42,3 +42,31 @@ ja:
       too_short: "は%{count}文字以上で入力してください"
       too_long: "は%{count}文字以下で入力してください"
       invalid: "は正しい形式で入力してください"
+
+  wine_records:
+    new:
+      title: "ワイン新規登録"
+
+    form:
+      name: "ワイン名"
+      acidity: "酸味"
+      tannin: "タンニン"
+      sweetness: "甘口/辛口"
+      satisfaction: "満足度"
+
+    options:
+      acidity:
+        low: "弱"
+        medium: "中"
+        high: "強"
+      tannin:
+        low: "弱"
+        medium: "中"
+        high: "強"
+      sweetness:
+        dry: "辛口"
+        sweet: "甘口"
+      satisfaction:
+        low: "★"
+        medium: "★★"
+        high: "★★★"
