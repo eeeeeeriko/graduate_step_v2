@@ -17,61 +17,61 @@
 
     <div class="mb-3">
       <p><%= t("wine_records.form.acidity") %><span class="text-danger">*</span></p>
-      <div class="btn-group w-100" role="group" aria-label="<%= t("wine_records.form.acidity") %>">
+      <div class="btn-group w-100 wine-rating-group" role="group" aria-label="<%= t("wine_records.form.acidity") %>">
         <% [
           [t("wine_records.options.acidity.high"), 3],
           [t("wine_records.options.acidity.medium"), 2],
           [t("wine_records.options.acidity.low"), 1]
         ].each do |label, value| %>
           <%= f.radio_button :acidity, value, class: "btn-check", required: true %>
-          <%= f.label :acidity, label, value: value, class: "btn btn-outline-primary" %>
+          <%= f.label :acidity, label, value: value, class: "btn btn-outline-danger" %>
         <% end %>
       </div>
     </div>
 
     <div class="mb-3">
       <p><%= t("wine_records.form.tannin") %><span class="text-danger">*</span></p>
-      <div class="btn-group w-100" role="group" aria-label="<%= t("wine_records.form.tannin") %>">
+      <div class="btn-group w-100 wine-rating-group" role="group" aria-label="<%= t("wine_records.form.tannin") %>">
         <% [
           [t("wine_records.options.tannin.high"), 3],
           [t("wine_records.options.tannin.medium"), 2],
           [t("wine_records.options.tannin.low"), 1]
         ].each do |label, value| %>
           <%= f.radio_button :tannin, value, class: "btn-check", required: true %>
-          <%= f.label :tannin, label, value: value, class: "btn btn-outline-primary" %>
+          <%= f.label :tannin, label, value: value, class: "btn btn-outline-danger" %>
         <% end %>
       </div>
     </div>
 
     <div class="mb-3">
       <p><%= t("wine_records.form.sweetness") %><span class="text-danger">*</span></p>
-      <div class="btn-group w-100" role="group" aria-label="<%= t("wine_records.form.sweetness") %>">
+      <div class="btn-group w-100 wine-rating-group" role="group" aria-label="<%= t("wine_records.form.sweetness") %>">
         <% [
           [t("wine_records.options.sweetness.sweet"), 2],
           [t("wine_records.options.sweetness.dry"), 1]
         ].each do |label, value| %>
           <%= f.radio_button :sweetness, value, class: "btn-check", required: true %>
-          <%= f.label :sweetness, label, value: value, class: "btn btn-outline-primary" %>
+          <%= f.label :sweetness, label, value: value, class: "btn btn-outline-danger" %>
         <% end %>
       </div>
     </div>
 
     <div class="mb-3">
       <p><%= t("wine_records.form.satisfaction") %><span class="text-danger">*</span></p>
-      <div class="btn-group w-100" role="group" aria-label="<%= t("wine_records.form.satisfaction") %>">
+      <div class="btn-group w-100 wine-rating-group" role="group" aria-label="<%= t("wine_records.form.satisfaction") %>">
         <% [
           [t("wine_records.options.satisfaction.high"), 3],
           [t("wine_records.options.satisfaction.medium"), 2],
           [t("wine_records.options.satisfaction.low"), 1]
         ].each do |label, value| %>
           <%= f.radio_button :satisfaction, value, class: "btn-check", required: true %>
-          <%= f.label :satisfaction, label, value: value, class: "btn btn-outline-primary" %>
+          <%= f.label :satisfaction, label, value: value, class: "btn btn-outline-danger" %>
         <% end %>
       </div>
     </div>
 
     <div class="d-flex justify-content-end gap-2 mt-3">
       <%= link_to t("common.cancel"), wine_records_path, class: "btn btn-secondary" %>
-      <%= f.submit @wine_record.persisted? ? t("common.update") : t("common.save"), class: "btn btn-primary" %>
+      <%= f.submit @wine_record.persisted? ? t("common.update") : t("common.save"), class: "btn btn-danger" %>
     </div>
   <% end %>

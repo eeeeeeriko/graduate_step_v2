@@ -1,2 +1,19 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.btn-group > .field_with_errors {
+  display: contents;
+}
+
+.wine-rating-group > .btn,
+.wine-rating-group > .field_with_errors > .btn {
+  flex: 1 1 0;
+}
+
+/* エラー時も選択済みボタンを赤く表示する */
+.wine-rating-group .btn-check:checked + .btn,
+.wine-rating-group .field_with_errors:has(> .btn-check:checked) + .field_with_errors > .btn {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
