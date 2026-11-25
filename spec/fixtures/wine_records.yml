@@ -1,0 +1,16 @@
+wine_one:
+  user: user_one
+  name: テストワインA
+  acidity: 1
+  tannin: 2
+  sweetness: 1
+  satisfaction: 3
+
+wine_two:
+  user: user_two
+  name: テストワインB
+  acidity: 3
+  tannin: 1
+  sweetness: 2
+  satisfaction: 2
+  
