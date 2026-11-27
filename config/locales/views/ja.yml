@@ -53,7 +53,7 @@ ja:
         name: "ワイン名"
         acidity: "酸味"
         tannin: "タンニン"
-        sweetness: "甘辛度"
+        sweetness: "甘口/辛口"
         satisfaction: "満足度"
     errors:
       models:
@@ -71,7 +71,7 @@ ja:
     messages:
       blank: "を入力してください"
       taken: "はすでに登録されています"
-      confirmation: "と確認用の入力が一致しません"
+      confirmation: "がパスワードと一致しません"
       too_short: "は%{count}文字以上で入力してください"
       too_long: "は%{count}文字以下で入力してください"
       invalid: "は正しい形式で入力してください"
