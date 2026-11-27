@@ -1,0 +1,4 @@
+ja:
+  devise:
+    registrations:
+      signed_up: "アカウント登録が完了しました。"
