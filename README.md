@@ -258,11 +258,6 @@ DockerおよびDocker Composeを使用します。
 起動コマンド：`docker compose up --build`
 起動後、http://localhost:3000 にアクセスします
 
-### 公開URLを追記
-READMEの冒頭に以下を追加する。**URLが未確認なら仮のURLは書かない。**
-
-### 公開URL
-（Renderの実際のURLを記載）
 
 ### 10-2. 技術選定の比較検討
 
